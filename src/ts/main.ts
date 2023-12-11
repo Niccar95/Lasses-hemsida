@@ -31,7 +31,7 @@ response.data.message.forEach((dogImg) => {
   image.className = "dogImage";
 });
 
-//===================DOG FACT QUOTE==========================
+//===================DOG FACT QUOTE========================== LASSE FAVORIT Retriver och Boxer
 //Hämta DOG API Facts
 const response = await axios.get<IDogAPIdata>(
   "https://dogapi.dog/api/v2/facts?limit=10"
