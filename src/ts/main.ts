@@ -1,7 +1,6 @@
 import axios from "axios";
-import axios from "axios";
 import "../scss/style.scss";
-import { IDogAPIdata } from "./Models/IDogAPIdata";
+import { IDogAPIdata } from "./models/IDogAPIdata";
 
 const aboutLasse = document.getElementById("aboutLasse") as HTMLSelectElement;
 
@@ -33,11 +32,11 @@ response.data.message.forEach((dogImg) => {
 
 //===================DOG FACT QUOTE========================== LASSE FAVORIT Retriver och Boxer
 //Hämta DOG API Facts
-const response = await axios.get<IDogAPIdata>(
+const responseDog = await axios.get<IDogAPIdata>(
   "https://dogapi.dog/api/v2/facts?limit=10"
 );
 //Få fram fact
-const data = response.data.data[0].attributes.body;
+const data = responseDog.data.data[0].attributes.body;
 
 //Skapa Container för fakta quoten
 const factContainer = document.getElementById(
