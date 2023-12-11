@@ -23,13 +23,7 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;
@@ -95,3 +89,29 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.dogImage {
+  width: 250px;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  animation: dogImg 3s linear infinite;
+
+}
+
+@keyframes dogImg{
+  0%, 100% {
+  border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+  34% {
+    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+  }
+  67% {
+    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+  }
+}
+
+#imageContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+
