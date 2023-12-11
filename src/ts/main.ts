@@ -51,3 +51,19 @@ const createHtmlForDogFact = (theData: string) => {
 //anropa funktionen med parameter för att få infon till API:et
 createHtmlForDogFact(data);
 //===========================================================
+
+import { IBoredResponse } from './models/IBoredResponse';
+
+
+  const fetchData = async () : Promise<string> =>  {
+  
+      const response = await axios.get<IBoredResponse>("http://www.boredapi.com/api/activity?type=recreational");
+
+      console.log(response.data.activity);
+
+      return response.data.activity;   
+    
+  }
+ 
+fetchData();
+  
