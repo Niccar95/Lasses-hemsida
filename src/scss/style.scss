@@ -142,3 +142,14 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.dogImage {
+  width: 250px;
+}
+
+#imageContainer {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  
+}
