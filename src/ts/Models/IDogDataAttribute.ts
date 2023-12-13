@@ -1,4 +1,4 @@
-import { IDogBodyFact } from "./IDogBodyFact";
+import { IDogBodyFact } from "./../models/IDogBodyFact";
 
 export interface IDogDataAttribute {
   attributes: IDogBodyFact;
