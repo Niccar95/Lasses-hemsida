@@ -1,3 +1,11 @@
+@use "variables" as v;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "Belgiano Serif";
   src: url("./../fonts/Belgiano\ Serif\ 2.ttf");
@@ -7,19 +15,108 @@
   src: url("./../fonts/LittleKidsHandwriting-Regular.otf") s;
 }
 
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  gap: 1em;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: v.$alabaster;
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  #landingPage {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/src/img/open-book-1428428.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: v.$alabaster;
+
+    #topNavigation {
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100px;
+      padding: 1em;
+      position: fixed;
+      top: 0;
+      background-color: v.$timberwolf;
+
+      #navList {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+
+        .myImage {
+          width: 70px;
+          height: 70px;
+          border-radius: 50%;
+          border: solid whitesmoke;
+          cursor: pointer;
+        }
+
+        a {
+          font-size: 1.2em;
+          font-weight: 500;
+          color: black;
+          text-decoration: inherit;
+          padding: 0.5em;
+          transition: ease-in-out 0.2s;
+        }
+        a:hover {
+          color: whitesmoke;
+        }
+      }
+    }
+
+    .titleContainer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+      background-color: v.$alabaster;
+      width: 600px;
+      height: 500px;
+      border-radius: 40% 50% 70% 40% / 40% 50% 70% 40%;
+      overflow: hidden;
+      animation: morph 3s linear infinite;
+      transition: background-color 1s;
+      cursor: pointer;
+    }
+
+    .titleContainer:active {
+      background-color: v.$Dun;
+      color: whitesmoke;
+      opacity: 0.8;
+    }
+
+    @keyframes morph {
+      0%,
+      100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+      }
+      34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+      }
+      67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: v.$timberwolf;
+  }
 }
 
 h1 {
@@ -27,51 +124,34 @@ h1 {
   line-height: 1.1;
 }
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+#aboutLasse {
+  height: 100vh;
+  margin-left: 30%;
+}
+.aboutMe {
+  font-size: 40px;
+  margin-left: 27%;
+  width: 35%;
+  padding: 8px;
+  background-color: rgb(77, 165, 77);
+  animation-name: example;
+  animation-duration: 4s;
+  border-radius: 30px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #3178c6aa);
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+@keyframes example {
+  0% {
+    background-color: rgb(240, 52, 52);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: rgb(186, 186, 210);
+  }
+  100% {
+    background-color: rgb(250, 74, 74);
+  }
 }
 
 @media (prefers-color-scheme: light) {
@@ -88,6 +168,7 @@ button:focus-visible {
 }
 
 .dogImage {
+  padding: 10px;
   width: 250px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: dogImg 3s linear infinite;
@@ -108,5 +189,74 @@ button:focus-visible {
 
 #imageContainer {
   display: flex;
+  width: 100%;
   justify-content: space-around;
+}
+
+#dogFactContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  background-color: v.$c-background;
+}
+
+.sparkle {
+  color: v.$c-text;
+  margin: auto auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.u-hover--sparkle {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.75em;
+  &::before,
+  &::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+  }
+
+  &::before {
+    border-top: 0.2em solid v.$c-border;
+    border-bottom: 0.2em solid v.$c-border;
+    transform: scale3d(0, 1, 1);
+  }
+
+  &::after {
+    border-left: 0.2em solid v.$c-border;
+    border-right: 0.2em solid v.$c-border;
+    transform: scale3d(1, 0, 1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1, 1, 1);
+    transition: transform 900ms;
+  }
+}
+
+.lasses-interests {
+  h2 {
+    text-align: center;
+  }
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .picture {
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
 }
