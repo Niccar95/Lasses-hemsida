@@ -53,10 +53,13 @@ const createHtmlForDogFact = (theData: string) => {
 createHtmlForDogFact(data);
 //===========================================================
 
+
+
 const fetchData = async (): Promise<string> => {
   const response = await axios.get<IBoredResponse>(
     "http://www.boredapi.com/api/activity?type=recreational"
   );
+
 
   console.log(response.data.activity);
 
@@ -64,3 +67,4 @@ const fetchData = async (): Promise<string> => {
 };
 
 fetchData();
+
