@@ -1,6 +1,6 @@
 import axios from "axios";
 import "../scss/style.scss";
-import { IDogAPIdata } from "./models/IDogAPIdata";
+import { IDogAPIdata } from "./Models/IDogAPIdata";
 
 const aboutLasse = document.getElementById("aboutLasse") as HTMLSelectElement;
 
@@ -52,7 +52,7 @@ const createHtmlForDogFact = (theData: string) => {
 createHtmlForDogFact(data);
 //===========================================================
 
-import { IBoredResponse } from "./models/IBoredResponse";
+import { IBoredResponse } from "./Models/IBoredResponse";
 
 const fetchData = async (): Promise<string> => {
   const response = await axios.get<IBoredResponse>(
