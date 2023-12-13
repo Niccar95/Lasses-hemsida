@@ -35,7 +35,7 @@ response.data.message.forEach((dogImg) => {
 const responseDog = await axios.get<IDogAPIdata>(
   "https://dogapi.dog/api/v2/facts?limit=10"
 );
-//Få fram fact
+//Få fram fact-quote
 const data = responseDog.data.data[0].attributes.body;
 
 //Skapa Container för fakta quoten
@@ -52,18 +52,16 @@ const createHtmlForDogFact = (theData: string) => {
 createHtmlForDogFact(data);
 //===========================================================
 
-import { IBoredResponse } from './models/IBoredResponse';
+import { IBoredResponse } from "./models/IBoredResponse";
 
+const fetchData = async (): Promise<string> => {
+  const response = await axios.get<IBoredResponse>(
+    "http://www.boredapi.com/api/activity?type=recreational"
+  );
 
-  const fetchData = async () : Promise<string> =>  {
-  
-      const response = await axios.get<IBoredResponse>("http://www.boredapi.com/api/activity?type=recreational");
+  console.log(response.data.activity);
 
-      console.log(response.data.activity);
+  return response.data.activity;
+};
 
-      return response.data.activity;   
-    
-  }
- 
 fetchData();
-  
