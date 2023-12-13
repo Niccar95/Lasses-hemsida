@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Belgiano Serif";
+  src: url("./../fonts/Belgiano\ Serif\ 2.ttf");
+}
+@font-face {
+  font-family: "LittleKidsHandwriting";
+  src: url("./../fonts/LittleKidsHandwriting-Regular.otf") s;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
 }
 
 a {
@@ -13,8 +21,6 @@ a {
 a:hover {
   color: #535bf2;
 }
-
-
 
 h1 {
   font-size: 3.2em;
@@ -85,12 +91,12 @@ button:focus-visible {
   width: 250px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: dogImg 3s linear infinite;
-
 }
 
-@keyframes dogImg{
-  0%, 100% {
-  border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+@keyframes dogImg {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
   }
   34% {
     border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
@@ -104,5 +110,3 @@ button:focus-visible {
   display: flex;
   justify-content: space-around;
 }
-
-
