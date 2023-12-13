@@ -1,12 +1,13 @@
 import axios from "axios";
 import "../scss/style.scss";
-import { IDogAPIdata } from "./models/IDogAPIdata";
+import { IDogAPIdata } from "./Models/IDogAPIdata";
 
 const aboutLasse = document.getElementById("aboutLasse") as HTMLSelectElement;
 
 const aboutMeHeader = document.createElement("h3");
 aboutMeHeader.innerHTML = `Om mig`;
-const Ptag = document.createElement("p");
+aboutMeHeader.className = 'aboutMe'
+const Ptag = document.createElement('p');
 
 Ptag.innerHTML = `Hej! Lasse heter jag och är (...) år. 
 Jag älskar hundar, mat och vin.`;
