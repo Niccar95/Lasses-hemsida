@@ -1,6 +1,6 @@
 import axios from "axios";
 import "../scss/style.scss";
-import { IDogAPIdata } from "./models/IDogAPIdata";
+import { IDogAPIdata } from "./Models/IDogAPIdata";
 
 const aboutLasse = document.getElementById("aboutLasse") as HTMLSelectElement;
 
