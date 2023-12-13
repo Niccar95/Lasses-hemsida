@@ -1,6 +1,7 @@
 import axios from "axios";
 import "../scss/style.scss";
 import { IDogAPIdata } from "./Models/IDogAPIdata";
+import { IBoredResponse } from "./Models/IBoredResponse";
 
 const aboutLasse = document.getElementById("aboutLasse") as HTMLSelectElement;
 
@@ -52,12 +53,13 @@ const createHtmlForDogFact = (theData: string) => {
 createHtmlForDogFact(data);
 //===========================================================
 
-import { IBoredResponse } from "./Models/IBoredResponse";
+
 
 const fetchData = async (): Promise<string> => {
   const response = await axios.get<IBoredResponse>(
     "http://www.boredapi.com/api/activity?type=recreational"
   );
+
 
   console.log(response.data.activity);
 
@@ -65,3 +67,4 @@ const fetchData = async (): Promise<string> => {
 };
 
 fetchData();
+
