@@ -193,30 +193,16 @@ h1 {
   justify-content: space-around;
 }
 
-
 #dogFactContainer {
   display: flex;
   width: 100%;
   justify-content: center;
-}
-
-$c-border: #9F2042;
-$c-background: #E3E4DB;
-$c-text: #441151;
-
-body {
-  font-family: 'Alice', Helvetica, sans-serif;
-}
-
-#dogFactContainer {
- 
   text-align: center;
-  background-color: $c-background;
- 
+  background-color: v.$c-background;
 }
 
 .sparkle {
-  color: $c-text;
+  color: v.$c-text;
   margin: auto auto;
   &:hover {
     cursor: pointer;
@@ -229,7 +215,7 @@ body {
   padding: 0.75em;
   &::before,
   &::after {
-    content: '';
+    content: "";
     box-sizing: border-box;
     position: absolute;
     top: 0;
@@ -240,20 +226,20 @@ body {
   }
 
   &::before {
-    border-top: 0.2em solid $c-border;
-    border-bottom: 0.2em solid $c-border;
-    transform: scale3d(0,1,1);
+    border-top: 0.2em solid v.$c-border;
+    border-bottom: 0.2em solid v.$c-border;
+    transform: scale3d(0, 1, 1);
   }
 
   &::after {
-    border-left: 0.2em solid $c-border;
-    border-right: 0.2em solid $c-border;
-    transform: scale3d(1,0,1);
+    border-left: 0.2em solid v.$c-border;
+    border-right: 0.2em solid v.$c-border;
+    transform: scale3d(1, 0, 1);
   }
 
   &:hover::before,
   &:hover::after {
-    transform: scale3d(1,1,1);
+    transform: scale3d(1, 1, 1);
     transition: transform 900ms;
   }
 }
@@ -262,10 +248,10 @@ body {
   h2 {
     text-align: center;
   }
-.image-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .picture {
     width: 500px;
@@ -273,5 +259,4 @@ body {
     padding: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
-
 }
