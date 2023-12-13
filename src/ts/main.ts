@@ -53,7 +53,7 @@ const createHtmlForDogFact = (theData: string) => {
 createHtmlForDogFact(data);
 //===========================================================
 
-import { IBoredResponse } from "./models/IBoredResponse";
+import { IBoredResponse } from "./Models/IBoredResponse";
 
 const fetchData = async (): Promise<string> => {
   const response = await axios.get<IBoredResponse>(
