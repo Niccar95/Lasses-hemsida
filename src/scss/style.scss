@@ -3,9 +3,15 @@
   line-height: 1.5;
   font-weight: 400;
   scroll-behavior: smooth;
-
 }
-
+@font-face {
+  font-family: "Belgiano Serif";
+  src: url("./../fonts/Belgiano\ Serif\ 2.ttf");
+}
+@font-face {
+  font-family: "LittleKidsHandwriting";
+  src: url("./../fonts/LittleKidsHandwriting-Regular.otf") s;
+}
 
 body {
   display: flex;
@@ -24,9 +30,9 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    background-color:  #E6E6DE;
+    background-color: #e6e6de;
 
-    #topNavigation {  
+    #topNavigation {
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -36,7 +42,7 @@ body {
       padding: 1em;
       position: fixed;
       top: 0;
-      background-color: #D3D3C7;
+      background-color: #d3d3c7;
 
       #navList {
         width: 80%;
@@ -49,7 +55,7 @@ body {
           width: 70px;
           height: 70px;
           border-radius: 50%;
-          bordeR: solid whitesmoke;
+          border: solid whitesmoke;
           cursor: pointer;
         }
 
@@ -72,7 +78,7 @@ body {
       align-items: center;
       justify-content: center;
       box-sizing: border-box;
-      background-color: #E6E6DE;
+      background-color: #e6e6de;
       width: 600px;
       height: 500px;
       border-radius: 40% 50% 70% 40% / 40% 50% 70% 40%;
@@ -80,34 +86,34 @@ body {
       animation: morph 3s linear infinite;
       transition: background-color 1s;
       cursor: pointer;
-}
+    }
 
-.titleContainer:active {
-  background-color: #CFBEB0;
-  color: whitesmoke;
-  opacity: 0.8;
+    .titleContainer:active {
+      background-color: #cfbeb0;
+      color: whitesmoke;
+      opacity: 0.8;
+    }
 
-}
-
-@keyframes morph{
-  0%, 100% {
-  border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+    @keyframes morph {
+      0%,
+      100% {
+        border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+      }
+      34% {
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+      }
+      67% {
+        border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
+      }
+    }
   }
-  34% {
-    border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
-  }
-  67% {
-    border-radius: 100% 60% 60% 100% / 100% 100% 60% 60%;
-  }
-}
-}
 
-footer {
-  display: flex; 
-  align-items: center;
-  justify-content: center;
-  background-color:#D3D3C7;
-}
+  footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #d3d3c7;
+  }
 }
 
 h1 {
@@ -115,10 +121,10 @@ h1 {
   line-height: 1.1;
 }
 
-#aboutLasse{
+#aboutLasse {
   margin-left: 30%;
 }
-.aboutMe{
+.aboutMe {
   font-size: 40px;
   margin-left: 27%;
   width: 35%;
@@ -130,12 +136,19 @@ h1 {
 }
 
 @keyframes example {
-  0%   {background-color: rgb(240, 52, 52);}
-  25%  {background-color: yellow;}
-  50%  {background-color: rgb(186, 186, 210);}
-  100% {background-color: rgb(250, 74, 74);;}
+  0% {
+    background-color: rgb(240, 52, 52);
+  }
+  25% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: rgb(186, 186, 210);
+  }
+  100% {
+    background-color: rgb(250, 74, 74);
+  }
 }
-
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -154,12 +167,12 @@ h1 {
   width: 250px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: dogImg 3s linear infinite;
-
 }
 
-@keyframes dogImg{
-  0%, 100% {
-  border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+@keyframes dogImg {
+  0%,
+  100% {
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
   }
   34% {
     border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
@@ -174,5 +187,3 @@ h1 {
   display: flex;
   justify-content: space-around;
 }
-
-
