@@ -168,6 +168,7 @@ h1 {
 }
 
 .dogImage {
+  padding: 10px;
   width: 250px;
   border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
   animation: dogImg 3s linear infinite;
@@ -187,7 +188,90 @@ h1 {
 }
 
 #imageContainer {
-  width: 100vh;
   display: flex;
+  width: 100%;
   justify-content: space-around;
+}
+
+
+#dogFactContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+$c-border: #9F2042;
+$c-background: #E3E4DB;
+$c-text: #441151;
+
+body {
+  font-family: 'Alice', Helvetica, sans-serif;
+}
+
+#dogFactContainer {
+ 
+  text-align: center;
+  background-color: $c-background;
+ 
+}
+
+.sparkle {
+  color: $c-text;
+  margin: auto auto;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.u-hover--sparkle {
+  box-sizing: border-box;
+  position: relative;
+  padding: 0.75em;
+  &::before,
+  &::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform-origin: center;
+  }
+
+  &::before {
+    border-top: 0.2em solid $c-border;
+    border-bottom: 0.2em solid $c-border;
+    transform: scale3d(0,1,1);
+  }
+
+  &::after {
+    border-left: 0.2em solid $c-border;
+    border-right: 0.2em solid $c-border;
+    transform: scale3d(1,0,1);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    transform: scale3d(1,1,1);
+    transition: transform 900ms;
+  }
+}
+
+.lasses-interests {
+  h2 {
+    text-align: center;
+  }
+.image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  }
+  .picture {
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+
 }
