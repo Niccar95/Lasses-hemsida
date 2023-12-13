@@ -30,12 +30,14 @@ body {
     align-items: center;
     justify-content: center;
     background-image: url("/src/img/open-book-1428428.jpg");
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: v.$alabaster;
 
     #topNavigation {
+      z-index: 100;
+      gap: 1em;
       box-sizing: border-box;
       display: flex;
       align-items: center;
@@ -47,12 +49,12 @@ body {
       top: 0;
       background-color: v.$timberwolf;
 
-      #navList {
-        width: 80%;
+      .imageContainer {
         display: flex;
-        justify-content: space-evenly;
         align-items: center;
-        list-style: none;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
 
         .myImage {
           width: 70px;
@@ -60,8 +62,17 @@ body {
           border-radius: 50%;
           border: solid whitesmoke;
           cursor: pointer;
-        }
+        }  
 
+      }
+
+      #navList {
+        width: 80%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+      
         a {
           font-size: 1.2em;
           font-weight: 500;
@@ -72,6 +83,7 @@ body {
         }
         a:hover {
           color: whitesmoke;
+          font-size: 2em;
         }
       }
     }
