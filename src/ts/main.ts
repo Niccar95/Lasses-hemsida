@@ -18,6 +18,7 @@ aboutLasse.appendChild(Ptag);
 const response = await axios.get<IdogResponse>(
   "https://dog.ceo/api/breeds/image/random/3"
 );
+console.log(response.data);
 
 const imageContainer = document.getElementById("imageContainer");
 response.data.message.forEach((dogImg) => {
@@ -47,6 +48,7 @@ const factContainer = document.getElementById(
 const createHtmlForDogFact = (theData: string) => {
   const factText = document.createElement("h3");
   factText.innerHTML = theData;
+  factText.setAttribute("id", "factTextID");
   factContainer.appendChild(factText);
 };
 //anropa funktionen med parameter för att få infon till API:et
