@@ -68,3 +68,12 @@ const fetchData = async (): Promise<string> => {
 
 fetchData();
 
+
+const topNavigation = document.querySelector(".topNavigation") as HTMLElement;
+
+const navigationHeight = topNavigation.offsetHeight;
+
+document.documentElement.style.setProperty (
+  "--scroll-padding", 
+  navigationHeight + "px"
+)
