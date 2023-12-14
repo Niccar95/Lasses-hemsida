@@ -10,7 +10,7 @@ aboutMeHeader.innerHTML = `Om mig`;
 const Ptag = document.createElement("p");
 
 Ptag.innerHTML = `Hej! Lasse heter jag och är (...) år. 
-Jag älskar hundar, mat och vin.`;
+Jag älskar hundar, mat och vin!`
 
 aboutLasse.appendChild(aboutMeHeader);
 aboutLasse.appendChild(Ptag);
